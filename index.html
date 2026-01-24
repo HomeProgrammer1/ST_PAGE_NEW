@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Twins Detective</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header id="hero">
+        <img src="hero-bg.png" alt="Detective Office Background" class="hero-bg-img">
+        <div class="container hero-content">
+            <h1 class="hero-title" data-i18n="hero_title">SAINT TWINS DETECTIVE</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Гібридна детективна гра-симуляція для корпоративного
+                сектору</p>
+            <a href="#pricing" class="btn-main" data-i18n="hero_btn">Обрати формат</a>
+        </div>
+
+        <div class="lang-switcher">
+            <button onclick="changeLanguage('en')" class="lang-btn active">EN</button>
+            <button onclick="changeLanguage('pl')" class="lang-btn">PL</button>
+            <button onclick="changeLanguage('ua')" class="lang-btn">UA</button>
+        </div>
+
+        <button id="menu-btn" class="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div id="nav-overlay" class="nav-overlay">
+            <button id="close-btn" class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <nav class="nav-links">
+                <a href="#hero" class="nav-link" data-i18n="nav_home">Головна</a>
+                <a href="#features" class="nav-link" data-i18n="nav_features">Переваги</a>
+                <a href="#how-it-works" class="nav-link" data-i18n="nav_gallery">Галерея</a>
+                <a href="#pricing" class="nav-link" data-i18n="nav_pricing">Пакети та Ціни</a>
+                <a href="#reviews-faq" class="nav-link" data-i18n="nav_reviews">Відгуки та Клієнти</a>
+                <a href="#footer" class="nav-link highlight" data-i18n="nav_contact">Контакти</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="immersion">
+        <div class="container">
+            <h2 class="section-title" data-i18n="immersion_title">Більше, ніж просто гра</h2>
+
+            <div class="immersion-row reveal-row">
+                <div class="immersion-content">
+                    <div class="icon-box">📂</div>
+                    <h3 data-i18n="imm_1_title">Речові докази</h3>
+                    <p data-i18n="imm_1_text">Забудьте про нудні презентації. Ви працюєте з <strong>реальними
+                            матеріалами справи</strong>.
+                        Гортайте архіви, вивчайте відбитки пальців, шукайте приховані деталі в протоколах допитів. Все,
+                        що ви тримаєте в руках — має значення.</p>
+                </div>
+                <div class="immersion-image">
+                    <img src="images/investigation_desk.png"
+                        alt="Detective examining physical evidence files on a desk at night">
+                </div>
+            </div>
+
+            <div class="immersion-row reverse reveal-row">
+                <div class="immersion-content">
+                    <div class="icon-box">💻</div>
+                    <h3 data-i18n="imm_2_title">Цифровий інтелект</h3>
+                    <p data-i18n="imm_2_text">Синхронізація з XXI століттям. Наш унікальний <strong>веб-додаток</strong>
+                        — це ваш міст до бази
+                        даних поліції. Перевіряйте алібі, зламуйте камери спостереження та отримуйте результати
+                        експертиз у реальному часі прямо зі свого смартфону.</p>
+                </div>
+                <div class="immersion-image">
+                    <img src="images/digital_investigation_laptop.png"
+                        alt="Laptop screen displaying the digital investigative interface in a dark office">
+                </div>
+            </div>
+
+            <div class="immersion-row reveal-row">
+                <div class="immersion-content">
+                    <div class="icon-box">🤝</div>
+                    <h3 data-i18n="imm_3_title">Командний штурм</h3>
+                    <p data-i18n="imm_3_text">Жодної тиші. Це справжній <strong>мозковий штурм</strong>. Ви будуєте
+                        версії, сперечаєтесь,
+                        об'єднуєте логіку та інтуїцію. Тут перемагає не найрозумніший одинак, а найбільш згуртована
+                        команда.</p>
+                </div>
+                <div class="immersion-image">
+                    <img src="images/team_collaboration.png"
+                        alt="Corporate team intensely collaborating around a glass investigation board">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <main>
+        <section id="features">
+            <div class="container">
+                <h2 class="section-title" data-i18n="features_title">Чому це ефективно</h2>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-brain card-icon"></i>
+                        <h3 data-i18n="feat_1_title">Тренінг, а не просто гра</h3>
+                        <p data-i18n="feat_1_text">Симуляція умов невизначеності (VUCA). Вчимо приймати рішення під
+                            тиском.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-briefcase card-icon"></i>
+                        <h3 data-i18n="feat_2_title">Політика Zero Headache</h3>
+                        <p data-i18n="feat_2_text">Ви надаєте лише офіс. Ми привозимо меблі, 4G-інтернет, звук та декор.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line card-icon"></i>
+                        <h3 data-i18n="feat_3_title">Фінансова ефективність</h3>
+                        <p data-i18n="feat_3_text">Перемога визначається не швидкістю, а збереженим бюджетом команди.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="how-it-works">
+            <div class="container">
+                <h2 class="section-title" data-i18n="gallery_title">Галерея</h2>
+
+                <div class="steps-gallery">
+                    <div class="step-card">
+                        <img src="images/gallerey/DSC00425.jpg" alt="Gallery Image 1" class="step-image">
+                    </div>
+                    <div class="step-card">
+                        <img src="images/gallerey/DSC00429.jpg" alt="Gallery Image 2" class="step-image">
+                    </div>
+                    <div class="step-card">
+                        <img src="images/gallerey/DSC00430.jpg" alt="Gallery Image 3" class="step-image">
+                    </div>
+                    <div class="step-card">
+                        <img src="images/gallerey/DSC00468.jpg" alt="Gallery Image 4" class="step-image">
+                    </div>
+                    <div class="step-card">
+                        <img src="images/gallerey/DSC00511.jpg" alt="Gallery Image 5" class="step-image">
+                    </div>
+                    <div class="step-card">
+                        <img src="images/gallerey/DSC00554.jpg" alt="Gallery Image 6" class="step-image">
+                    </div>
+                    <div class="step-card">
+                        <img src="images/gallerey/DSC00610.jpg" alt="Gallery Image 7" class="step-image">
+                    </div>
+                    <div class="step-card">
+                        <img src="images/gallerey/DSC00721.jpg" alt="Gallery Image 8" class="step-image">
+                    </div>
+                    <div class="step-card">
+                        <img src="images/gallerey/DSC00729.jpg" alt="Gallery Image 9" class="step-image">
+                    </div>
+                    <div class="step-card">
+                        <img src="images/gallerey/DSC00766.jpg" alt="Gallery Image 10" class="step-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pricing">
+            <div class="container">
+                <h2 class="section-title" data-i18n="pricing_title">Оберіть свій формат</h2>
+
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <h3 data-i18n="price_1_title">OFFICE DETECTIVE</h3>
+                        <p class="price">1800 PLN</p>
+                        <p class="price-desc" data-i18n="price_1_desc">Smart & Fast</p>
+                        <ul class="price-list" data-i18n="price_1_list">
+                            <li>🕵️ 2 ведучих</li>
+                            <li>💻 Веб-додаток</li>
+                            <li>📂 Базові матеріали справи</li>
+                            <li>⏱ Тривалість: 2 - 3 години</li>
+                            <li>🎯 Ідеально для команд до 20 осіб</li>
+                        </ul>
+                        <button class="btn-main open-modal-btn" data-plan="Office Detective"
+                            data-i18n="price_btn">Замовити</button>
+                    </div>
+
+                    <div class="price-card popular">
+                        <div class="badge" data-i18n="price_pop_badge">ХІТ ПРОДАЖУ</div>
+                        <h3 data-i18n="price_2_title">PRO INVESTIGATION</h3>
+                        <p class="price">3500 PLN</p>
+                        <p class="price-desc" data-i18n="price_2_desc">Training & Atmosphere</p>
+                        <ul class="price-list" data-i18n="price_2_list">
+                            <li>🔥 <strong>Все з пакету Office +</strong></li>
+                            <li>📸 Фотозона та декор</li>
+                            <li>🎩 Реквізит для гравців</li>
+                            <li>🎁 Призи</li>
+                            <li>📶 4G Інтернет</li>
+                            <li>📊 Дебрифінг (аналіз дій)</li>
+                        </ul>
+                        <button class="btn-main btn-accent open-modal-btn" data-plan="Pro Investigation"
+                            data-i18n="price_2_btn">Замовити
+                            PRO</button>
+                    </div>
+
+                    <div class="price-card">
+                        <h3 data-i18n="price_3_title">EXECUTIVE VIP</h3>
+                        <p class="price">6500 PLN</p>
+                        <p class="price-desc" data-i18n="price_3_desc">Employer Branding</p>
+                        <ul class="price-list" data-i18n="price_3_list">
+                            <li>👑 <strong>Все з пакету PRO +</strong></li>
+                            <li>📷 Професійний фотограф</li>
+                            <li>📈 HR-звіт (аналітика Soft Skills)</li>
+                            <li>📝 Кастомізація сценарію</li>
+                            <li>🎥 Відео-звіт</li>
+                        </ul>
+                        <button class="btn-main open-modal-btn" data-plan="Executive VIP"
+                            data-i18n="price_3_btn">Замовити VIP</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews-faq">
+            <div class="container">
+
+                <h2 class="section-title" data-i18n="reviews_title">Що кажуть клієнти</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="stars">★★★★★</div>
+                            <h3 data-i18n="review_1_name">Olena, HR Director</h3>
+                        </div>
+                        <p data-i18n="review_1_text">"Це було неймовірно! Команда справді об'єдналася, щоб розкрити
+                            справу. Найкращий тімбілдінг
+                            за останні 3 роки."</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="stars">★★★★★</div>
+                            <h3 data-i18n="review_2_name">Andrii, Team Lead</h3>
+                        </div>
+                        <p data-i18n="review_2_text">"Сподобалось, що це не просто розвага, а тренування soft skills. Ми
+                            побачили, хто як приймає
+                            рішення в стресі."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+
+                <div class="faq-section">
+                    <h2 class="section-title" data-i18n="faq_title">Часті запитання</h2>
+
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-i18n="faq_q1">Чи складно грати, якщо ми ніколи не були детективами?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-i18n="faq_a1">Зовсім ні! Гра побудована так, щоб було цікаво і новачкам, і
+                                    досвідченим гравцям у
+                                    квізи. Наш веб-додаток веде команду за руку, даючи підказки, якщо ви зайшли в глухий
+                                    кут. Головне — логіка та командна робота.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-i18n="faq_q2">Що робити, якщо в офісі зникне інтернет?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-i18n="faq_a2">Ми передбачили це. У вартість пакетів PRO та VIP входить наш
+                                    власний 4G-роутер, який
+                                    ми привозимо з собою. Ваша гра відбудеться за будь-яких умов (ну, хіба що
+                                    зомбі-апокаліпсис, але ми й там щось придумаємо).</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-i18n="faq_q3">Чи можна брендувати гру під нашу компанію?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-i18n="faq_a3">Так! У пакеті Executive VIP ми можемо адаптувати сценарій:
+                                    наприклад, "жертвою"
+                                    (умовно) стане конкурент вашої фірми, а серед доказів будуть зустрічатися ваші
+                                    корпоративні жарти чи продукти.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-i18n="faq_q4">Скільки часу займає підготовка локації?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-i18n="faq_a4">Ми працюємо за принципом "Ніндзя". Нам потрібно всього 30-40
+                                    хвилин до початку гри,
+                                    щоб розставити декор, налаштувати звук та розкласти докази. Після гри ми так само
+                                    швидко прибираємо все за собою.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container footer-content">
+
+            <div class="footer-info">
+                <h2 class="section-title" data-i18n="contact_title">Зв'яжіться з нами</h2>
+                <p data-i18n="contact_desc">Залиште заявку, і ми розрахуємо точний кошторис для вашої команди.</p>
+                <p class="vat-info" data-i18n="contact_vat">📍 Працюємо по всій Польщі. Ціни Netto + 23% VAT.</p>
+            </div>
+
+            <form id="orderForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Ваше ім'я" data-i18n-placeholder="form_name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="company" placeholder="Назва компанії" data-i18n-placeholder="form_company"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" id="phone" placeholder="Номер телефону" data-i18n-placeholder="form_phone"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="E-mail" data-i18n-placeholder="form_email" required>
+                </div>
+
+                <div class="form-group">
+                    <select id="package">
+                        <option value="office">Office Detective (1800 PLN)</option>
+                        <option value="pro" selected>PRO Investigation (3500 PLN)</option>
+                        <option value="vip">Executive VIP (6500 PLN)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-main btn-submit" data-i18n="form_btn">Надіслати заявку</button>
+            </form>
+
+        </div>
+
+        <div class="copyright">
+            <p data-i18n="copyright">&copy; 2026 Saint Twins Detective. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Popup -->
+    <div id="order-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+
+            <!-- FORM CONTENT -->
+            <div id="modal-form-content">
+                <h3 class="modal-title" data-i18n="modal_title">Оформлення заявки</h3>
+                <p class="modal-subtitle"><span data-i18n="modal_subtitle">Ви обрали пакет:</span> <span
+                        id="selected-plan-name" style="color: var(--accent-yellow);">...</span></p>
+
+                <form id="modal-order-form" class="modal-form">
+                    <input type="hidden" id="modal-plan-input" name="plan">
+
+                    <div class="form-group">
+                        <input type="text" id="modal-name" placeholder="Ваше Ім'я" data-i18n-placeholder="form_name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="modal-phone" placeholder="Телефон / Telegram"
+                            data-i18n-placeholder="form_phone" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="modal-email" placeholder="E-mail" data-i18n-placeholder="form_email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="modal-company" placeholder="Назва компанії"
+                            data-i18n-placeholder="form_company" required>
+                    </div>
+
+                    <button type="submit" class="btn-main full-width" data-i18n="modal_btn">Відправити запит</button>
+                </form>
+            </div>
+
+            <!-- SUCCESS MESSAGE (Hidden by default) -->
+            <div id="modal-success-content" style="display: none; text-align: center; padding: 20px 0;">
+                <div class="success-icon" style="font-size: 4rem; color: var(--accent-yellow); margin-bottom: 20px;">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 style="color: var(--text-white); margin-bottom: 10px; font-size: 1.5rem;"
+                    data-i18n="modal_success_title">Ваша заявка прийнята!</h3>
+                <p style="color: var(--text-grey);" data-i18n="modal_success_desc">Ми зв'яжемося з вами найближчим часом
+                    для уточнення деталей.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

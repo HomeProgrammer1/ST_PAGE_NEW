@@ -1,0 +1,1514 @@
+/* Змінні кольорів з вашого документу [cite: 75, 76, 77] */
+:root {
+    --bg-dark: #0a0e17;
+    /* Deep Dark Blue */
+    --text-white: #ffffff;
+    --text-grey: #e0e0e0;
+    --accent-yellow: #f1c40f;
+    /* Police Tape Yellow */
+    --accent-red: #c0392b;
+    /* Crime Scene Red */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+
+    /* Колір фону для випадку, якщо картинка не завантажиться */
+    background-color: #0a0e17;
+
+    /* Фонове зображення для всіх секцій (окрім hero) */
+    background-image: url('body-bg.png');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--text-white);
+}
+
+/* Додатково: клас для контейнера, щоб контент не розтягувався на весь екран */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HERO SECTION (Перший екран) --- */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+    /* --- ОНОВЛЕНИЙ ФОН HERO --- */
+    /* Background removed, now using <img> tag */
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.4);
+}
+
+/* Gradient fade at bottom for smooth transition to body background */
+#hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent, #0a0e17);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* <--- ОСЬ ТУТ ми закрили блок #hero. Анімація йде окремо нижче */
+
+
+/* ========================================= */
+/* СТИЛІ HERO (Текст та Кнопка)          */
+/* ========================================= */
+
+/* 1. Визначаємо анімацію */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Базові стилі елементів (вони спочатку НЕВИДИМІ) */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: var(--text-white);
+    text-transform: uppercase;
+
+    opacity: 0;
+    /* Ховаємо за замовчуванням */
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-grey);
+    margin-bottom: 40px;
+    font-weight: 300;
+
+    opacity: 0;
+    /* Ховаємо за замовчуванням */
+}
+
+/* ОНОВЛЕНИЙ СТИЛЬ КНОПКИ (Універсальний) */
+/* ОНОВЛЕНИЙ СТИЛЬ КНОПКИ (Універсальний) */
+button.btn-main,
+.btn-main {
+    display: inline-block;
+    padding: 15px 40px;
+
+    /* Кольори та рамки */
+    border: 1px solid var(--accent-yellow);
+    color: var(--accent-yellow);
+    background: transparent;
+    /* ПРИБИРАЄ сірий фон стандартної кнопки */
+
+    /* Шрифт та текст */
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    /* Поведінка */
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    /* ЦЕНТРУВАННЯ */
+    margin: 20px auto 0 auto;
+    /* Відступ зверху і центрування по боках */
+    margin-top: auto;
+    /* Pushes button to the bottom if card has fixed height */
+}
+
+/* Ефект при наведенні (залишається без змін) */
+button.btn-main:hover,
+.btn-main:hover {
+    background-color: var(--accent-yellow);
+    color: var(--bg-dark);
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.3);
+}
+
+/* ========================================= */
+/* ЛОГІКА ЗАПУСКУ АНІМАЦІЇ (Через JS)    */
+/* ========================================= */
+
+/* Анімація спрацьовує ТІЛЬКИ коли JS додає клас .animate-active до секції #hero */
+
+#hero.animate-active .hero-title,
+#hero.animate-active .hero-subtitle,
+#hero.animate-active .btn-main {
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Затримки для ефекту "драбинки" */
+#hero.animate-active .hero-title {
+    animation-delay: 0.2s;
+}
+
+#hero.animate-active .hero-subtitle {
+    animation-delay: 0.4s;
+}
+
+#hero.animate-active .btn-main {
+    animation-delay: 0.6s;
+}
+
+/* ========================================= */
+/* СЕКЦІЯ IMMERSION (Занурення)          */
+/* ========================================= */
+
+/* ========================================= */
+/* 3. ПРОЗОРІСТЬ СЕКЦІЙ (ОНОВЛЕНО)       */
+/* ========================================= */
+/* Додано #gallery та #steps до списку, щоб фон проглядав і там */
+
+#immersion,
+#features,
+#steps,
+/* <--- Додано етапи */
+#gallery,
+/* <--- Додано галерею (user name) */
+#how-it-works,
+/* <--- Actual ID for Gallery */
+#pricing,
+#reviews-faq,
+#contact,
+/* <--- Додано контакти про всяк випадок */
+footer {
+    background-color: rgba(13, 17, 25, 0.85) !important;
+    /* Напівпрозорий темний */
+    backdrop-filter: blur(5px);
+
+    /* Гарантуємо, що немає іншого фону */
+    background-image: none;
+}
+
+#immersion {
+    padding: 100px 0;
+    /* Використовуємо RGBA версію вашого темного кольору для прозорості */
+    background-color: rgba(13, 17, 25, 0.85) !important;
+    /* Додаємо легке розмиття фону під текстом для кращої читабельності (опціонально) */
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+.immersion-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 120px;
+    opacity: 0;
+    /* Hidden initially for JS animation */
+    transition: all 1s ease-out;
+}
+
+.immersion-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Reverse layout for the second item */
+.immersion-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.immersion-content {
+    flex: 1;
+}
+
+.immersion-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-white);
+    font-family: var(--font-heading);
+}
+
+.immersion-content p {
+    font-size: 1.1rem;
+    color: var(--text-grey);
+    line-height: 1.8;
+}
+
+.immersion-content strong {
+    color: var(--accent-yellow);
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Images Styling */
+.immersion-image {
+    flex: 1;
+    position: relative;
+}
+
+.immersion-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.immersion-image:hover img {
+    transform: scale(1.02);
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 900px) {
+
+    .immersion-row,
+    .immersion-row.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        margin-bottom: 80px;
+    }
+
+    .immersion-content h3 {
+        font-size: 1.8rem;
+    }
+}
+
+/* --- SCROLL ANIMATION STATES --- */
+
+/* Initial State (Before scrolling to it) */
+.immersion-row:not(.active) .immersion-content {
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
+.immersion-row:not(.active) .immersion-image {
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+/* Initial State for Reversed Rows */
+.immersion-row.reverse:not(.active) .immersion-content {
+    transform: translateX(50px);
+}
+
+.immersion-row.reverse:not(.active) .immersion-image {
+    transform: translateX(-50px);
+}
+
+/* Active State (Triggered by JS) */
+.immersion-row.active {
+    opacity: 1;
+}
+
+.immersion-row.active .immersion-content,
+.immersion-row.active .immersion-image {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.8s ease-out;
+}
+
+/* --- СЕКЦІЯ FEATURES (Переваги) --- */
+#features {
+    padding: 100px 0;
+    /* Використовуємо RGBA версію вашого темного кольору для прозорості */
+    background-color: rgba(13, 17, 25, 0.85) !important;
+    backdrop-filter: blur(5px);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Сітка для карток */
+.features-grid {
+    display: flex;
+    gap: 30px;
+    /* Відступи між картками */
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Щоб на телефонах картки падали вниз */
+}
+
+/* Стиль однієї картки (Ефект скла / Glassmorphism) */
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    /* Дуже прозорий білий */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Тонка рамка */
+    padding: 40px 30px;
+    border-radius: 4px;
+    /* Легке заокруглення */
+    flex: 1;
+    /* Рівномірна ширина */
+    min-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ефект при наведенні мишкою */
+.feature-card:hover {
+    transform: translateY(-10px);
+    /* Картка піднімається */
+    border-color: var(--accent-yellow);
+    /* Рамка стає жовтою */
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--accent-yellow);
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: var(--text-white);
+}
+
+.feature-card p {
+    color: var(--text-grey);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- СЕКЦІЯ HOW IT WORKS (Галерея) --- */
+#how-it-works {
+    padding: 80px 0;
+    /* background-color: #0f141e; REMOVED FOR TRANSPARENCY */
+    /* Трішки світліший відтінок для контрасту */
+    overflow: hidden;
+    /* Ховаємо все, що вилазить за межі екрана */
+}
+
+.steps-gallery {
+    display: flex;
+    /* Вишиковуємо в ряд */
+    overflow-x: auto;
+    /* Вмикаємо горизонтальну прокрутку */
+    gap: 30px;
+    padding-bottom: 20px;
+    /* Місце для скролбару */
+    scroll-behavior: smooth;
+    /* Плавна прокрутка */
+
+    /* Для мобільних: щоб картки "прилипали" при скролі */
+    scroll-snap-type: x mandatory;
+}
+
+/* Прибираємо скролбар (для краси), але функція скролу залишається */
+.steps-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.steps-gallery::-webkit-scrollbar-thumb {
+    background: var(--accent-yellow);
+    border-radius: 4px;
+}
+
+.steps-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding-bottom: 20px;
+
+    /* Важливі зміни для мишки */
+    cursor: grab;
+    /* Показує руку */
+    user-select: none;
+    /* Щоб текст не виділявся при перетягуванні */
+
+    /* Ховаємо скролбар для всіх браузерів */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+/* Ховаємо скролбар для Chrome/Safari */
+.steps-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+/* Клас, який JS додасть, коли ми затиснемо кнопку */
+.steps-gallery.active {
+    cursor: grabbing;
+    /* Рука стискається */
+    scroll-behavior: auto;
+    /* Вимикаємо плавність для миттєвої реакції на мишку */
+}
+
+.step-card {
+    min-width: 450px;
+    /* Було 300px, стало ширше */
+    height: 300px;
+    /* Було 200px, стало вище */
+    background: var(--bg-dark);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    pointer-events: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    /* Додав легку тінь для краси */
+}
+
+.step-image {
+    width: 100%;
+    height: 100%;
+    /* Картинка тепер на всю картку */
+    object-fit: cover;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+/* Додамо ефект, що картинка стає яскравішою, коли вона по центру (опціонально) */
+.step-card:hover .step-image {
+    opacity: 1;
+}
+
+/* Дозволяємо клікати на текст всередині, якщо треба */
+.step-info {
+    pointer-events: auto;
+}
+
+/* --- СЕКЦІЯ ЦІНИ --- */
+#pricing {
+    padding: 100px 0;
+    /* Використовуємо RGBA версію вашого темного кольору для прозорості */
+    background-color: rgba(13, 17, 25, 0.85) !important;
+    backdrop-filter: blur(5px);
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    /* Всі картки автоматично однакової висоти */
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Щоб на мобільному падало вниз */
+}
+
+/* Загальний стиль картки */
+.price-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 300px;
+    min-height: 520px;
+    /* Однакова висота для всіх карток */
+    transition: 0.3s;
+    position: relative;
+    /* FIX: Flexbox for centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- ВИПРАВЛЕННЯ КНОПОК У ЦІНАХ --- */
+
+/* 1. Базовий стиль для всіх кнопок у картках (OFFICE та VIP) */
+.price-card button.btn-main {
+    background: transparent;
+    /* Робимо фон прозорим, щоб було видно темну тему */
+    border: 1px solid var(--accent-yellow);
+    color: var(--accent-yellow);
+    /* Жовтий текст - читається ідеально */
+
+    /* Шрифтові налаштування */
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    padding: 15px 40px;
+    cursor: pointer;
+    margin-top: auto;
+    transition: all 0.3s ease;
+    width: auto;
+    /* Або 100% якщо хочете на всю ширину */
+}
+
+/* 2. Ефект при наведенні мишкою (HOVER) */
+.price-card button.btn-main:hover {
+    background-color: var(--accent-yellow);
+    /* Заливка жовтим */
+    color: var(--bg-dark);
+    /* Текст стає темним (контраст) */
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.4);
+}
+
+/* 3. Спеціальний стиль для "Хіт продажу" (PRO) - щоб він одразу кидався в очі */
+.price-card.popular button.btn-main {
+    background-color: var(--accent-yellow);
+    /* Одразу залитий */
+    color: var(--bg-dark);
+    /* Темний текст */
+    font-weight: 800;
+    /* Ще жирніший шрифт */
+}
+
+/* Hover для PRO кнопки (ефект світіння) */
+.price-card.popular button.btn-main:hover {
+    transform: scale(1.05);
+    /* Трохи збільшується */
+    box-shadow: 0 0 25px rgba(241, 196, 15, 0.6);
+}
+
+/* Стиль для ціни */
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin: 15px 0 5px;
+    font-family: var(--font-heading);
+}
+
+.price-desc {
+    color: var(--text-grey);
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* Список послуг */
+.price-list {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+    line-height: 2;
+    /* Відступи між рядками */
+}
+
+.price-list li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+/* Кнопки в цінах */
+.btn-price {
+    display: block;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--text-white);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-price:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- ОСОБЛИВИЙ СТИЛЬ ДЛЯ ХІТА (Центральна картка) --- */
+.price-card.popular {
+    transform: scale(1.1);
+    /* Збільшуємо картку */
+    border: 2px solid var(--accent-yellow);
+    /* Жовта рамка */
+    background: rgba(241, 196, 15, 0.05);
+    /* Ледь жовтий фон */
+    z-index: 2;
+    /* Виводимо на передній план */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-yellow);
+    color: var(--bg-dark);
+    padding: 5px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Кнопка в популярному пакеті теж має бути яскравою */
+.btn-accent {
+    background: var(--accent-yellow);
+    color: var(--bg-dark);
+    border: none;
+    font-weight: bold;
+}
+
+.btn-accent:hover {
+    background: #d4ac0d;
+    /* Темніший жовтий при наведенні */
+}
+
+/* Адаптив: на мобільному прибираємо збільшення, бо не влізе */
+@media (max-width: 900px) {
+    .price-card.popular {
+        transform: scale(1);
+        margin: 20px 0;
+    }
+}
+
+/* --- FOOTER (Підвал) --- */
+#footer {
+    background-color: rgba(13, 17, 25, 0.85) !important;
+    backdrop-filter: blur(5px);
+
+    padding-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* Щоб на мобільному падало вниз */
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.footer-info {
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+.footer-info p {
+    color: var(--text-grey);
+    margin-bottom: 20px;
+}
+
+.vat-info {
+    color: var(--accent-yellow) !important;
+    font-weight: bold;
+}
+
+/* Стиль форми */
+.contact-form {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Поля вводу */
+input,
+select {
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: var(--text-white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--accent-yellow);
+    /* Жовта рамка при кліку */
+}
+
+/* Кнопка форми */
+.btn-submit {
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--accent-yellow);
+    color: var(--bg-dark);
+    border: none;
+}
+
+.btn-submit:hover {
+    background-color: #d4ac0d;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Адаптив: на телефонах все в стовпчик */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+/* СЕКЦІЯ ВІДГУКИ ТА FAQ (Оновлена)      */
+/* ========================================= */
+
+#reviews-faq {
+    padding: 80px 0;
+    /* Використовуємо RGBA версію вашого темного кольору для прозорості */
+    background-color: rgba(13, 17, 25, 0.85) !important;
+    backdrop-filter: blur(5px);
+}
+
+/* --- ВІДГУКИ --- */
+.reviews-grid {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-yellow);
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.review-header h3 {
+    font-size: 1.1rem;
+    color: var(--text-white);
+}
+
+.stars {
+    color: var(--accent-yellow);
+    letter-spacing: 3px;
+}
+
+.review-card p {
+    color: var(--text-grey);
+    font-style: italic;
+}
+
+/* --- FAQ (ПЛАВНИЙ АКОРДЕОН) --- */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    /* Обрізає все, що виходить за межі */
+    transition: background 0.3s;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 20px;
+    color: var(--text-white);
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+    cursor: pointer;
+
+    /* Flexbox layout to push arrow to the right */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--accent-yellow);
+}
+
+/* Arrow Icon Styling */
+.faq-question i {
+    font-size: 0.9rem;
+    /* Slightly smaller than text */
+    color: var(--accent-yellow);
+    /* Yellow arrow */
+    transition: transform 0.4s ease;
+    /* Smooth rotation */
+}
+
+/* Rotate arrow when active */
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+/* Highlight text when active */
+.faq-item.active .faq-question span {
+    color: var(--accent-yellow);
+}
+
+.faq-item.active .faq-question {
+    color: var(--accent-yellow);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- ГОЛОВНА МАГІЯ ПЛАВНОСТІ --- */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 20px;
+    will-change: max-height;
+}
+
+/* Відступи переносимо на сам текст, щоб уникнути ривків */
+.faq-answer p {
+    padding: 20px 0;
+    margin: 0;
+    color: var(--text-grey);
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    will-change: opacity, transform;
+}
+
+/* Коли блок відкритий - текст стає видимим */
+.faq-item.active .faq-answer p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Коли FAQ активний - відповідь розкривається */
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 20px;
+}
+
+/* Стиль FAQ (Акордеон) */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 20px;
+    color: var(--text-white);
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--accent-yellow);
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+/* Клас active додається через JS */
+.faq-item.active .faq-question {
+    color: var(--accent-yellow);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+    /* Стрілка повертається */
+}
+
+.faq-answer {
+    max-height: 0;
+    /* Спочатку приховано */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+}
+
+.faq-item.active .faq-answer {
+    padding: 20px;
+    /* З'являються відступи коли відкрито */
+}
+
+.faq-answer p {
+    color: var(--text-grey);
+}
+
+/* --- ЛОГОТИПИ ПАРТНЕРІВ (Marquee) --- */
+.partners-strip {
+    margin: 80px 0;
+    /* Відступ зверху і знизу від сусідніх блоків */
+    text-align: center;
+    overflow: hidden;
+    /* Ховаємо все, що вилазить за межі екрана */
+}
+
+.partners-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-grey);
+    margin-bottom: 30px;
+    opacity: 0.7;
+}
+
+.logos-overflow {
+    position: relative;
+    width: 100%;
+    /* Градієнт по боках, щоб логотипи гарно зникали в темряві */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logos-track {
+    display: flex;
+    gap: 50px;
+    /* Відстань між логотипами */
+    width: max-content;
+    /* Ширина залежить від кількості лого */
+
+    /* АНІМАЦІЯ */
+    animation: scrollLogos 30s linear infinite;
+}
+
+.logos-track img {
+    height: 40px;
+    /* Висота логотипів (невелика, акуратна) */
+    opacity: 0.5;
+    /* Трохи приглушені, щоб не різали очі */
+    transition: opacity 0.3s;
+    filter: grayscale(100%);
+    /* Робимо їх чорно-білими для стилю */
+}
+
+/* При наведенні мишкою на смужку - логотипи стають яскравішими, але НЕ зупиняються */
+.logos-track:hover img {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Сама логіка руху */
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Зсуваємо на -50%, тому що у нас 2 набори картинок. 
+           Коли доїжджаємо до кінця першого набору, анімація починається знову з 0.
+           Оскільки початок другого набору ідентичний початку першого - око не бачить стрибка. */
+        transform: translateX(-50%);
+    }
+}
+
+/* --- НАВІГАЦІЯ (Меню) --- */
+
+/* Кнопка відкриття (Бургер) */
+.hamburger-btn {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    z-index: 1000;
+    /* Має бути поверх всього */
+    background: transparent;
+    border: none;
+    color: var(--text-white);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.5);
+    /* Темна підкладка, щоб видно було на світлому */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.hamburger-btn:hover {
+    color: var(--accent-yellow);
+    transform: scale(1.1);
+}
+
+/* Оверлей меню (Сам Попап) */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 14, 23, 0.85);
+    /* Напівпрозорий чорний */
+    backdrop-filter: blur(15px);
+    /* ЕФЕКТ РОЗМИТТЯ ФОНУ */
+    -webkit-backdrop-filter: blur(15px);
+    /* Для Safari */
+    z-index: 2000;
+    /* Найвищий шар */
+
+    /* Анімація появи */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Клас, який додасть JS, щоб відкрити меню */
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Кнопка закриття (Хрестик) */
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: transparent;
+    border: none;
+    color: var(--text-grey);
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--accent-red);
+    /* Червоний при закритті */
+    transform: rotate(90deg);
+}
+
+/* Посилання в меню */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+}
+
+/* --- ВИПРАВЛЕННЯ РОЗМІРУ МЕНЮ --- */
+
+.nav-link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    /* Ставимо набагато менший розмір (було 2.5rem) */
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    position: relative;
+    padding: 5px 0;
+    /* Зменшуємо відступи між пунктами */
+    display: inline-block;
+    /* Щоб відступи працювали коректно */
+}
+
+/* Кнопка "Контакти" в меню */
+.nav-link.highlight {
+    font-size: 1.2rem;
+    /* Вона буде ще трішки меншою */
+    padding: 8px 25px;
+    margin-top: 15px;
+    border: 1px solid var(--accent-yellow);
+}
+
+/* Адаптив для телефонів (ще менше) */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 20px;
+        /* Менша відстань між рядками */
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        /* Розмір як у звичайного тексту заголовків */
+    }
+
+    .nav-link.highlight {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+}
+
+/* Ефект при наведенні на посилання */
+.nav-link:hover {
+    color: var(--accent-yellow);
+    transform: scale(1.05);
+}
+
+.nav-link.highlight {
+    color: var(--accent-yellow);
+    border: 2px solid var(--accent-yellow);
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.nav-link.highlight:hover {
+    background: var(--accent-yellow);
+    color: var(--bg-dark);
+}
+
+/* Адаптив для телефонів */
+@media (max-width: 768px) {
+    .nav-link {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+/* ========================================= */
+/* МОБІЛЬНА АДАПТАЦІЯ (RESPONSIVE)     */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+    /* --- 1. ЗАГАЛЬНІ ВІДСТУПИ --- */
+    .container {
+        padding: 0 20px;
+        /* Більше місця по боках для тексту */
+    }
+
+    section {
+        padding: 60px 0;
+        /* Зменшуємо вертикальні відступи між секціями */
+    }
+
+    .section-title {
+        font-size: 2rem;
+        /* Менші заголовки секцій */
+        margin-bottom: 30px;
+    }
+
+    /* --- 2. HERO SECTION (Перший екран) --- */
+    .hero-title {
+        font-size: 2.2rem;
+        /* Зменшуємо головний заголовок */
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    /* --- 3. ГРИДИ (Сітки) --- */
+    /* Робимо так, щоб все ставало в одну колонку */
+    .features-grid,
+    .pricing-grid,
+    .reviews-grid,
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* --- 4. МЕНЮ (НАВІГАЦІЯ) --- */
+    .hamburger-btn {
+        top: 20px;
+        /* Трохи зручніше розташування */
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+
+    .close-btn {
+        top: 20px;
+        right: 20px;
+        font-size: 2.2rem;
+        /* Великий хрестик, щоб легко попасти пальцем */
+    }
+
+    .nav-links {
+        gap: 25px;
+        /* Менші проміжки між пунктами */
+    }
+
+    .nav-link {
+        font-size: 1.3rem !important;
+        /* Примусово менший шрифт */
+        display: block;
+        /* Щоб легко клікати */
+        padding: 5px;
+    }
+
+    .nav-link.highlight {
+        font-size: 1.1rem !important;
+        margin-top: 10px;
+        padding: 10px 30px;
+    }
+
+    /* --- 5. ЦІНИ (Pricing) --- */
+    .price-card {
+        width: 100%;
+        /* Картка на всю ширину екрану */
+        margin-bottom: 20px;
+    }
+
+    .price-card.popular {
+        transform: scale(1);
+        /* Прибираємо збільшення, бо на телефоні це ламає верстку */
+        order: -1;
+        /* Ставимо популярний пакет ПЕРШИМ у списку */
+        margin: 20px 0;
+    }
+
+    /* --- 6. ГАЛЕРЕЯ ТА ЛОГОТИПИ --- */
+    .step-card {
+        min-width: 85vw;
+        /* Картка займає 85% ширини екрану */
+        height: 250px;
+    }
+
+    .partners-strip {
+        margin: 40px 0;
+    }
+}
+
+/* --- 7. ВИПРАВЛЕННЯ FAQ НА ТЕЛЕФОНІ --- */
+.faq-container {
+    width: 90%;
+    /* Робимо блок вужчим (залишаємо по 5% відступів з боків) */
+    margin: 0 auto;
+    /* Центруємо його */
+}
+
+.faq-question {
+    font-size: 1rem;
+    /* Трохи менший шрифт питання, щоб влазило */
+    padding: 15px;
+    /* Менші внутрішні відступи */
+}
+
+/* ========================================= */
+/* ПЕРЕМИКАЧ МОВ (Language Switcher)     */
+/* ========================================= */
+
+.lang-switcher {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    /* <--- MOVED TO LEFT */
+    /* transform: translateX(-50%);  <--- REMOVED CENTER ALIGNMENT */
+    transform: none;
+
+    z-index: 1001;
+    display: flex;
+    gap: 10px;
+    background: rgba(10, 14, 23, 0.6);
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-grey);
+    font-family: var(--font-body);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    text-transform: uppercase;
+    padding: 0 5px;
+}
+
+.lang-btn:hover {
+    color: var(--text-white);
+}
+
+.lang-btn.active {
+    color: var(--accent-yellow);
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.5);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .lang-switcher {
+        top: 20px;
+        left: 20px;
+        /* Keep it on the left for mobile too */
+        padding: 5px 10px;
+    }
+
+    .lang-btn {
+        font-size: 0.8rem;
+    }
+}
+
+/* ========================================= */
+/* MODAL POPUP (SINGLE SOURCE OF TRUTH)      */
+/* ========================================= */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* High contrast dark bg */
+    backdrop-filter: blur(5px);
+    z-index: 2147483647;
+    /* Max Z-index to force on top */
+
+    /* DEFAULT STATE: HIDDEN */
+    display: none;
+    opacity: 0;
+
+    /* FLEX CENTERING */
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+/* ACTIVE STATE: VISIBLE */
+.modal-overlay.active {
+    display: flex !important;
+    /* Force Flexbox */
+    opacity: 1 !important;
+    /* Force Opacity */
+}
+
+.modal-content {
+    background: #0a0e17;
+    border: 2px solid #f1c40f;
+    /* Accent Yellow */
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 40px rgba(241, 196, 15, 0.4);
+    animation: slideUp 0.3s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 2;
+}
+
+.close-modal:hover {
+    color: #f1c40f;
+}
+
+.modal-title {
+    color: var(--text-white);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+}
+
+.modal-subtitle {
+    color: var(--text-white);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
