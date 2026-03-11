@@ -4,56 +4,84 @@
 
 const translations = {
     en: {
-        hero_title: "SAINT TWINS DETECTIVE",
-        hero_subtitle: "Intellectual training for team interaction",
-        hero_btn: "Choose Format",
+        hero_title: "Not a Quiz. Not an Escape Room. An Investigation.",
+        hero_subtitle: "A detective simulation that runs inside your office. Real physical evidence. A live police database. Your team does the rest.",
+        hero_teaser: "A body found in the CEO's office. Three suspects. Two hours. Can your team close the case before the budget runs out?",
+        hero_tribal: "For teams that take their work seriously — and know how to have fun doing it.",
+        hero_btn: "See How It Works",
 
         nav_home: "Home",
         nav_features: "Features",
+        nav_how_it_works: "How It Works",
         nav_gallery: "Gallery",
         nav_pricing: "Pricing",
         nav_reviews: "Reviews",
         nav_contact: "Contact",
 
+        loss_aversion_text: "Most corporate team events follow the same script: everyone shows up, no one's excited, and by Monday it's forgotten. Trivia nights reward whoever memorizes the most. Escape rooms max out at 8 people. Training sessions — don't even start. You're not looking for entertainment. You're looking for something that actually changes how your team works together.",
+
         immersion_title: "Game as a Growth Tool",
         imm_1_title: "Critical Thinking",
-        imm_1_text: "Forget boring lectures. In this **detective simulation**, your team faces unstructured data from real case files. The goal is to filter out the noise, verify sources, and build a causal chain based on facts to identify the suspect.",
+        imm_1_text: "Forget boring lectures. In this detective simulation, your team faces unstructured data from real case files. The goal is to filter out the noise, verify sources, and build a causal chain based on facts to identify the suspect.",
         imm_2_title: "Digital Adaptability",
-        imm_2_text: "The investigation demands speed. Our web interface turns your office into a **police HQ**, simulating high pressure where every minute counts. Participants learn to test hypotheses instantly and make data-driven decisions.",
+        imm_2_text: "The investigation demands speed. Our web interface turns your office into a police HQ, simulating high pressure where every minute counts. Participants learn to test hypotheses instantly and make data-driven decisions.",
         imm_3_title: "Team Synergy",
-        imm_3_text: "To **crack the case**, a loud voice isn't enough. We create conditions where the team must move from chaotic debate to constructive dialogue. Success requires combining cold logic with creative intuition to solve the mystery.",
+        imm_3_text: "To crack the case, a loud voice isn't enough. We create conditions where the team must move from chaotic debate to constructive dialogue. Success requires combining cold logic with creative intuition to solve the mystery.",
 
         features_title: "Why It's Effective",
+        feat_2_title: "Zero Headache Policy",
+        feat_2_text: "You send us the address. We show up 40 minutes early with everything: decor, sound, props, 4G router, and two hosts. You just put your team in the room.",
         feat_1_title: "Training, Not Just Play",
         feat_1_text: "VUCA environment simulation. We teach decision-making under pressure.",
-        feat_2_title: "Zero Headache Policy",
-        feat_2_text: "You provide the space—we create the event. Full technical provisioning, setup, and administration are included. Zero organizational hassle for you.",
         feat_3_title: "Financial Efficiency",
         feat_3_text: "Victory depends on the saved budget and the accuracy of your conclusions, not speed. Every mistake has a price, so quality of decisions matters more than haste.",
 
+        hiw_title: "How It Works",
+        hiw_subtitle: "You're running a detective agency. This is your most important case yet.",
+        hiw_1_title: "The case lands on your desk",
+        hiw_1_text: "Your team receives a physical case file: crime scene photos, interrogation transcripts, lab reports, and a city map. Something happened. Someone did it. The client is paying your agency to find out who — and why.",
+        hiw_2_title: "Work the city from your table",
+        hiw_2_text: "The web app is your dispatch center. The city is full of addresses: witnesses who saw something, crime scenes that still hold evidence, the morgue, the police station. Click an address to send an investigator there. Every trip costs from your honorarium — that's taxi fare. Some addresses hold critical evidence. Some are dead ends. You won't know until you go.",
+        hiw_3_title: "Build your version",
+        hiw_3_text: "As information comes in, your team builds a theory. Who did it? What was the motive? What was the weapon? The case ends when you're ready — or when the honorarium runs out. Each team submits their answers.",
+        hiw_4_title: "The reveal",
+        hiw_4_text: "The host runs a full debrief: here's what actually happened, step by step. Which teams got it right. Who over-investigated. Who nailed it on half the budget.",
+        hiw_callout: "Every address costs money. Every wrong lead drains your fee.<br><strong>The winning team isn't the fastest — it's the most precise.</strong>",
+
         gallery_title: "Gallery",
 
+        stat_1_num: "50+",
+        stat_1_label: "Corporate Teams",
+        stat_2_num: "100+",
+        stat_2_label: "Events Delivered",
+        stat_3_label: "Operating Throughout Poland",
+
         pricing_title: "Choose Your Format",
-        price_1_title: "OFFICE DETECTIVE",
-        price_1_desc: "Smart & Fast",
-        price_1_list: "<li>🕵️ 2 Hosts</li><li>💻 Web Application</li><li>📂 Basic Case Files</li><li>⏱ Duration: 2 - 3h</li>",
-        price_btn: "Order Now",
+        price_3_title: "EXECUTIVE VIP",
+        price_3_desc: "Employer Branding",
+        price_3_per_person: "Includes HR Soft Skills report — turns the event into a development tool",
+        price_3_list: "<li>👑 <strong>Everything in PRO +</strong></li><li>📷 Professional Photographer</li><li>📈 HR Report (Soft Skills)</li><li>🏷️ Branded Materials (Logo)</li><li>🎥 Video Report</li>",
+        price_3_btn: "Book This Format",
 
         price_pop_badge: "BESTSELLER",
         price_2_title: "PRO INVESTIGATION",
         price_2_desc: "Training & Atmosphere",
+        price_2_per_person: "Full event experience, fully managed",
         price_2_list: "<li>🔥 <strong>Everything in Office +</strong></li><li>📸 Photo Zone & Decor</li><li>🎩 Player Props</li><li>🎁 Prizes</li><li>🎵 Thematic Soundscape</li><li>📊 Debriefing</li>",
-        price_2_btn: "Order PRO",
+        price_2_btn: "Book This Format",
 
-        price_3_title: "EXECUTIVE VIP",
-        price_3_desc: "Employer Branding",
-        price_3_list: "<li>👑 <strong>Everything in PRO +</strong></li><li>📷 Professional Photographer</li><li>📈 HR Report (Soft Skills)</li><li>🏷️ Branded Materials (Logo)</li><li>🎥 Video Report</li>",
-        price_3_btn: "Order VIP",
+        price_1_title: "OFFICE DETECTIVE",
+        price_1_desc: "Smart & Fast",
+        price_1_per_person: "From ~90 PLN per person for a team of 20",
+        price_1_list: "<li>🕵️ 2 Hosts</li><li>💻 Web Application</li><li>📂 Basic Case Files</li><li>⏱ Duration: 2 - 3h</li>",
+        price_btn: "Book Your Investigation",
+
+        urgency_text: "⚡ Popular dates fill 2–3 weeks in advance. We run one event per weekend.",
 
         reviews_title: "Client Reviews",
-        review_1_text: "\"It was incredible! The team really came together to crack the case. The best teambuilding in 3 years.\"",
+        review_1_text: "\"I've organized team events for 6 years. This is the first one where people asked 'when are we doing this again?' before we even finished packing up.\"",
         review_1_name: "Olena, HR Director",
-        review_2_text: "\"Loved that it wasn't just fun, but soft skills training. We saw who makes decisions under stress.\"",
+        review_2_text: "\"We found out more about how our team actually operates in 2 hours than in six months of 1-on-1s. Who stays calm, who leads, who needs structure — all of it came out.\"",
         review_2_name: "Andrii, Team Lead",
         partners_title: "Trusted By",
 
@@ -72,8 +100,8 @@ const translations = {
         contact_vat: "📍 Operating throughout Poland. Prices Netto + 23% VAT.",
         form_name: "Your Name",
         form_company: "Company Name",
-        form_phone: "Phone Number",
-        form_btn: "Send Request",
+        form_phone: "Phone / WhatsApp / Telegram",
+        form_btn: "Get a Custom Quote",
         copyright: "&copy; 2026 Saint Twins Detective. All rights reserved.",
 
         modal_title: "Order Request",
@@ -83,16 +111,21 @@ const translations = {
         modal_success_desc: "We will contact you shortly to clarify the details."
     },
     pl: {
-        hero_title: "SAINT TWINS DETECTIVE",
-        hero_subtitle: "Intelektualny trening współpracy zespołowej",
-        hero_btn: "Wybierz Format",
+        hero_title: "Nie Quiz. Nie Escape Room. Śledztwo.",
+        hero_subtitle: "Symulacja detektywistyczna w Twoim biurze. Prawdziwe fizyczne dowody. Baza danych policji na żywo. Twój zespół robi resztę.",
+        hero_teaser: "Ciało znalezione w gabinecie CEO. Trzech podejrzanych. Dwie godziny. Czy Twój zespół zamknie sprawę zanim skończy się budżet?",
+        hero_tribal: "Dla zespołów, które poważnie traktują pracę — i wiedzą, jak się przy tym bawić.",
+        hero_btn: "Jak to działa",
 
         nav_home: "Główna",
         nav_features: "Zalety",
+        nav_how_it_works: "Jak to działa",
         nav_gallery: "Galeria",
         nav_pricing: "Pakiety",
         nav_reviews: "Opinie",
         nav_contact: "Kontakt",
+
+        loss_aversion_text: "Większość firmowych eventów integracyjnych wygląda tak samo: wszyscy przychodzą, nikt się nie ekscytuje, a w poniedziałek nikt już nie pamięta. Quizy nagradzają tych, którzy dużo zapamiętują. Escape roomy mieszczą max 8 osób. Szkolenia — nie zaczynajmy. Szukasz czegoś, co naprawdę zmienia sposób pracy Twojego zespołu.",
 
         immersion_title: "Gra jako narzędzie rozwoju",
         imm_1_title: "Myślenie Krytyczne",
@@ -103,36 +136,59 @@ const translations = {
         imm_3_text: "Aby **rozwiązać zagadkę**, nie wystarczy krzyczeć. Tworzymy warunki, w których zespół musi przejść do konstruktywnego dialogu. Sukces wymaga połączenia chłodnej logiki z kreatywną intuicją, by zamknąć sprawę.",
 
         features_title: "Dlaczego to działa",
+        feat_2_title: "Polityka Zero Headache",
+        feat_2_text: "Podajesz nam adres. Przyjeżdżamy 40 minut wcześniej z wszystkim: dekoracjami, nagłośnieniem, rekwizytami, routerem 4G i dwoma prowadzącymi. Ty tylko wprowadzasz zespół do sali.",
         feat_1_title: "Szkolenie, nie tylko zabawa",
         feat_1_text: "Symulacja warunków niepewności (VUCA). Uczymy podejmowania decyzji pod presją.",
-        feat_2_title: "Polityka Zero Headache",
-        feat_2_text: "Udostępniasz tylko przestrzeń – my tworzymy wydarzenie. Pełne zaplecze techniczne, konfiguracja i administracja są w cenie. Zero problemów organizacyjnych dla klienta.",
         feat_3_title: "Efektywność Finansowa",
         feat_3_text: "Zwycięstwo zależy nie od szybkości, ale od zaoszczędzonego budżetu i trafności wniosków. Każdy błąd ma swoją cenę, dlatego jakość decyzji jest ważniejsza niż pośpiech.",
 
+        hiw_title: "Jak to działa",
+        hiw_subtitle: "Prowadzisz agencję detektywistyczną. To Twoja najważniejsza sprawa.",
+        hiw_1_title: "Sprawa trafia na Twoje biurko",
+        hiw_1_text: "Twój zespół otrzymuje fizyczne akta: zdjęcia z miejsca zbrodni, protokoły przesłuchań, raporty laboratoryjne i mapę miasta. Coś się stało. Ktoś to zrobił. Klient płaci Twojej agencji za wyjaśnienie kto — i dlaczego.",
+        hiw_2_title: "Pracujesz w mieście ze swojego stołu",
+        hiw_2_text: "Aplikacja webowa to Twoje centrum dyspozytorskie. Miasto jest pełne adresów: świadkowie, miejsca zbrodni, kostnica, komisariat. Kliknij adres, by wysłać tam śledczego. Każda wizyta kosztuje z Twojego honorarium. Niektóre adresy kryją kluczowe dowody. Inne to ślepe zaułki.",
+        hiw_3_title: "Budujesz swoją wersję",
+        hiw_3_text: "Gdy napływają informacje, zespół buduje teorię. Kto to zrobił? Jaki motyw? Jakie narzędzie? Sprawa kończy się gdy jesteście gotowi — lub gdy honorarium się skończy. Każdy zespół składa swoje odpowiedzi.",
+        hiw_4_title: "Ujawnienie",
+        hiw_4_text: "Prowadzący przeprowadza pełny debrief: oto co naprawdę się stało, krok po kroku. Które zespoły miały rację. Kto prowadził za wiele dochodzeń. Kto trafił w sedno przy połowie budżetu.",
+        hiw_callout: "Każdy adres kosztuje pieniądze. Każdy fałszywy trop drenuje Twoje honorarium.<br><strong>Zwycięski zespół to nie najszybszy — to najdokładniejszy.</strong>",
+
         gallery_title: "Galeria",
 
+        stat_1_num: "50+",
+        stat_1_label: "Zespołów Korporacyjnych",
+        stat_2_num: "100+",
+        stat_2_label: "Zrealizowanych Eventów",
+        stat_3_label: "Działamy w całej Polsce",
+
         pricing_title: "Wybierz Format",
-        price_1_title: "OFFICE DETECTIVE",
-        price_1_desc: "Smart & Fast",
-        price_1_list: "<li>🕵️ 2 Prowadzących</li><li>💻 Aplikacja Webowa</li><li>📂 Podstawowe Materiały</li><li>⏱ Czas: 2 - 3h</li>",
-        price_btn: "Zamów",
+        price_3_title: "EXECUTIVE VIP",
+        price_3_desc: "Employer Branding",
+        price_3_per_person: "Zawiera raport HR Soft Skills — event staje się narzędziem rozwoju",
+        price_3_list: "<li>👑 <strong>Wszystko z PRO +</strong></li><li>📷 Profesjonalny Fotograf</li><li>📈 Raport HR (Soft Skills)</li><li>🏷️ Branding materiałów (Logo)</li><li>🎥 Raport Wideo</li>",
+        price_3_btn: "Rezerwuj Format",
 
         price_pop_badge: "BESTSELLER",
         price_2_title: "PRO INVESTIGATION",
         price_2_desc: "Training & Atmosphere",
+        price_2_per_person: "Pełne doświadczenie eventowe, w pełni zarządzane",
         price_2_list: "<li>🔥 <strong>Wszystko z Office +</strong></li><li>📸 Strefa Foto i Dekoracje</li><li>🎩 Rekwizyty dla graczy</li><li>🎁 Nagrody</li><li>🎵 Tematyczna oprawa dźwiękowa</li><li>📊 Debriefing</li>",
-        price_2_btn: "Zamów PRO",
+        price_2_btn: "Rezerwuj Format",
 
-        price_3_title: "EXECUTIVE VIP",
-        price_3_desc: "Employer Branding",
-        price_3_list: "<li>👑 <strong>Wszystko z PRO +</strong></li><li>📷 Profesjonalny Fotograf</li><li>📈 Raport HR (Soft Skills)</li><li>🏷️ Branding materiałów (Logo)</li><li>🎥 Raport Wideo</li>",
-        price_3_btn: "Zamów VIP",
+        price_1_title: "OFFICE DETECTIVE",
+        price_1_desc: "Smart & Fast",
+        price_1_per_person: "Od ~90 PLN na osobę dla zespołu 20 osób",
+        price_1_list: "<li>🕵️ 2 Prowadzących</li><li>💻 Aplikacja Webowa</li><li>📂 Podstawowe Materiały</li><li>⏱ Czas: 2 - 3h</li>",
+        price_btn: "Zarezerwuj Śledztwo",
+
+        urgency_text: "⚡ Popularne terminy rezerwowane są 2–3 tygodnie wcześniej. Prowadzimy jeden event w weekend.",
 
         reviews_title: "Opinie Klientów",
-        review_1_text: "\"To było niesamowite! Zespół naprawdę się zjednoczył, by rozwiązać sprawę. Najlepszy teambuilding od 3 lat.\"",
+        review_1_text: "\"Organizuję eventy firmowe od 6 lat. To pierwszy, po którym ludzie pytali 'kiedy robimy to znowu?' jeszcze przed rozpakowaniem.\"",
         review_1_name: "Olena, HR Director",
-        review_2_text: "\"Podobało mi się, że to nie tylko zabawa, ale trening soft skills. Zobaczyliśmy, kto jak podejmuje decyzje w stresie.\"",
+        review_2_text: "\"W 2 godziny dowiedzieliśmy się więcej o tym jak naprawdę działa nasz zespół niż przez 6 miesięcy rozmów 1-na-1. Kto zachowuje spokój, kto prowadzi, kto potrzebuje struktury — wszystko wyszło na jaw.\"",
         review_2_name: "Andrii, Team Lead",
         partners_title: "Zaufali Nam",
 
@@ -151,8 +207,8 @@ const translations = {
         contact_vat: "📍 Działamy w całej Polsce. Ceny Netto + 23% VAT.",
         form_name: "Twoje Imię",
         form_company: "Nazwa Firmy",
-        form_phone: "Numer Telefonu",
-        form_btn: "Wyślij Zgłoszenie",
+        form_phone: "Telefon / WhatsApp / Telegram",
+        form_btn: "Zapytaj o wycenę",
         copyright: "&copy; 2026 Saint Twins Detective. Wszelkie prawa zastrzeżone.",
 
         modal_title: "Formularz Zamówienia",
@@ -162,16 +218,21 @@ const translations = {
         modal_success_desc: "Skontaktujemy się z Tobą wkrótce w celu ustalenia szczegółów."
     },
     ua: {
-        hero_title: "SAINT TWINS DETECTIVE",
-        hero_subtitle: "Інтелектуальний тренінг командної взаємодії",
-        hero_btn: "Обрати формат",
+        hero_title: "Не квіз. Не квест. Розслідування.",
+        hero_subtitle: "Детективна симуляція у вашому офісі. Реальні речові докази. База даних поліції в реальному часі. Ваша команда робить все інше.",
+        hero_teaser: "Тіло знайдено в кабінеті CEO. Троє підозрюваних. Дві години. Чи зможе ваша команда закрити справу до того, як скінчиться бюджет?",
+        hero_tribal: "Для команд, які серйозно ставляться до роботи — і вміють при цьому отримувати задоволення.",
+        hero_btn: "Як це працює",
 
         nav_home: "Головна",
         nav_features: "Переваги",
+        nav_how_it_works: "Як це працює",
         nav_gallery: "Галерея",
         nav_pricing: "Пакети та Ціни",
         nav_reviews: "Відгуки та Клієнти",
         nav_contact: "Контакти",
+
+        loss_aversion_text: "Більшість корпоративних тімбілдингів виглядають однаково: всі прийшли, ніхто не захоплений, а в понеділок вже ніхто не пам'ятає. Квізи нагороджують того, хто більше запам'ятав. Квести вміщають максимум 8 людей. Тренінги — навіть не починаймо. Ви шукаєте не розваги. Ви шукаєте те, що реально змінює те, як ваша команда працює разом.",
 
         immersion_title: "Гра як інструмент розвитку",
         imm_1_title: "Критичне мислення",
@@ -182,36 +243,59 @@ const translations = {
         imm_3_text: "Щоб **розкрити справу**, недостатньо гучних суперечок. Ми створюємо умови, де команда мусить перейти до конструктивного діалогу. Успіх вимагає поєднання холодної логіки та креативної інтуїції для розгадки таємниці.",
 
         features_title: "Чому це ефективно",
+        feat_2_title: "Політика Zero Headache",
+        feat_2_text: "Ви надаєте нам адресу. Ми приїжджаємо за 40 хвилин до початку з усім: декором, звуком, реквізитом, 4G-роутером та двома ведучими. Вам залишається лише привести команду.",
         feat_1_title: "Тренінг, а не гра",
         feat_1_text: "Симуляція умов невизначеності (VUCA). Вчимо приймати рішення під тиском.",
-        feat_2_title: "Політика Zero Headache",
-        feat_2_text: "Ви надаєте лише простір — ми створюємо подію. Повне технічне забезпечення, налаштування та адміністрування процесу входять у вартість. Жодних організаційних клопотів для замовника.",
         feat_3_title: "Фінансова ефективність",
         feat_3_text: "Перемога залежить не від швидкості, а від збереженого бюджету та точності висновків. Кожна помилка має свою ціну, тому якість рішень важливіша за поспіх.",
 
+        hiw_title: "Як це працює",
+        hiw_subtitle: "Ви керуєте детективним агентством. Це ваша найважливіша справа.",
+        hiw_1_title: "Справа потрапляє на ваш стіл",
+        hiw_1_text: "Ваша команда отримує фізичне досьє: фото з місця злочину, протоколи допитів, лабораторні звіти та карту міста. Щось сталося. Хтось це зробив. Клієнт платить вашому агентству, щоб з'ясувати хто — і чому.",
+        hiw_2_title: "Опрацьовуйте місто за своїм столом",
+        hiw_2_text: "Веб-додаток — ваш диспетчерський центр. Місто повне адрес: свідки, місця злочину, морг, поліцейський відділок. Клікніть на адресу, щоб відправити туди слідчого. Кожна поїздка коштує з вашого гонорару. Деякі адреси містять ключові докази. Деякі — тупики. Ви дізнаєтесь лише коли поїдете.",
+        hiw_3_title: "Будуєте свою версію",
+        hiw_3_text: "Коли надходить інформація, команда будує теорію. Хто це зробив? Який мотив? Яка зброя? Справа закінчується коли ви готові — або коли вичерпується гонорар. Кожна команда подає свої відповіді.",
+        hiw_4_title: "Розв'язка",
+        hiw_4_text: "Ведучий проводить повний дебрифінг: ось що насправді сталося, крок за кроком. Які команди вгадали. Хто провів забагато розслідувань. Хто вийшов у ціль при половині бюджету.",
+        hiw_callout: "Кожна адреса коштує гроші. Кожна хибна зачіпка спустошує ваш гонорар.<br><strong>Команда-переможець — не найшвидша. Вона найточніша.</strong>",
+
         gallery_title: "Галерея",
 
+        stat_1_num: "50+",
+        stat_1_label: "Корпоративних команд",
+        stat_2_num: "100+",
+        stat_2_label: "Проведених заходів",
+        stat_3_label: "По всій Польщі",
+
         pricing_title: "Оберіть свій формат",
-        price_1_title: "OFFICE DETECTIVE",
-        price_1_desc: "Smart & Fast",
-        price_1_list: "<li>🕵️ 2 ведучих</li><li>💻 Веб-додаток</li><li>📂 Базові матеріали</li><li>⏱ Тривалість: 2 - 3 години</li>",
-        price_btn: "Замовити",
+        price_3_title: "EXECUTIVE VIP",
+        price_3_desc: "Employer Branding",
+        price_3_per_person: "Включає HR-звіт Soft Skills — захід стає інструментом розвитку",
+        price_3_list: "<li>👑 <strong>Все з пакету PRO +</strong></li><li>📷 Професійний фотограф</li><li>📈 HR-звіт (Soft Skills)</li><li>🏷️ Брендування матеріалів (Лого)</li><li>🎥 Відео-звіт</li>",
+        price_3_btn: "Обрати формат",
 
         price_pop_badge: "ХІТ ПРОДАЖУ",
         price_2_title: "PRO INVESTIGATION",
         price_2_desc: "Training & Atmosphere",
+        price_2_per_person: "Повний івент-досвід, повністю керований",
         price_2_list: "<li>🔥 <strong>Все з пакету Office +</strong></li><li>📸 Фотозона та декор</li><li>🎩 Реквізит для гравців</li><li>🎁 Призи</li><li>🎵 Тематичний саунд-дизайн</li><li>📊 Дебрифінг</li>",
-        price_2_btn: "Замовити PRO",
+        price_2_btn: "Обрати формат",
 
-        price_3_title: "EXECUTIVE VIP",
-        price_3_desc: "Employer Branding",
-        price_3_list: "<li>👑 <strong>Все з пакету PRO +</strong></li><li>📷 Професійний фотограф</li><li>📈 HR-звіт (Soft Skills)</li><li>🏷️ Брендування матеріалів (Лого)</li><li>🎥 Відео-звіт</li>",
-        price_3_btn: "Замовити VIP",
+        price_1_title: "OFFICE DETECTIVE",
+        price_1_desc: "Smart & Fast",
+        price_1_per_person: "Від ~90 PLN на людину для команди з 20 осіб",
+        price_1_list: "<li>🕵️ 2 ведучих</li><li>💻 Веб-додаток</li><li>📂 Базові матеріали</li><li>⏱ Тривалість: 2 - 3 години</li>",
+        price_btn: "Замовити розслідування",
+
+        urgency_text: "⚡ Популярні дати бронюються за 2–3 тижні. Ми проводимо один захід на вихідних.",
 
         reviews_title: "Що кажуть клієнти",
-        review_1_text: "\"Це було неймовірно! Команда справді об'єдналася, щоб розкрити справу. Найкращий тімбілдінг за останні 3 роки.\"",
+        review_1_text: "\"Я організовую корпоративні заходи 6 років. Це перший, після якого люди питали 'коли робимо знову?' ще до кінця збирання.\"",
         review_1_name: "Olena, HR Director",
-        review_2_text: "\"Сподобалось, що це не просто розвага, а тренування soft skills. Ми побачили, хто як приймає рішення в стресі.\"",
+        review_2_text: "\"За 2 години ми дізналися про те, як реально працює наша команда, більше ніж за 6 місяців розмов 1-на-1. Хто зберігає спокій, хто веде, хто потребує структури — все вийшло назовні.\"",
         review_2_name: "Andrii, Team Lead",
         partners_title: "Нам довіряють",
 
@@ -230,8 +314,8 @@ const translations = {
         contact_vat: "📍 Працюємо по всій Польщі. Ціни Netto + 23% VAT.",
         form_name: "Ваше ім'я",
         form_company: "Назва компанії",
-        form_phone: "Номер телефону",
-        form_btn: "Надіслати заявку",
+        form_phone: "Телефон / WhatsApp / Telegram",
+        form_btn: "Отримати пропозицію",
         copyright: "&copy; 2026 Saint Twins Detective. Всі права захищені.",
 
         modal_title: "Оформлення заявки",
@@ -571,12 +655,12 @@ document.addEventListener('DOMContentLoaded', () => {
         footerForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             const email = document.getElementById('email').value;
-            const company = document.getElementById('company').value;
             const packageSelect = document.getElementById('package');
             const plan = packageSelect ? packageSelect.options[packageSelect.selectedIndex].text : '';
+            const name = '';
+            const company = '';
 
             const success = await sendToTelegram(name, phone, email, company, plan);
 
