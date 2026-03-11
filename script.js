@@ -18,8 +18,6 @@ const translations = {
         nav_reviews: "Reviews",
         nav_contact: "Contact",
 
-        loss_aversion_text: "Most corporate team events follow the same script: everyone shows up, no one's excited, and by Monday it's forgotten. Trivia nights reward whoever memorizes the most. Escape rooms max out at 8 people. Training sessions — don't even start. You're not looking for entertainment. You're looking for something that actually changes how your team works together.",
-
         immersion_title: "Game as a Growth Tool",
         imm_1_title: "Critical Thinking",
         imm_1_text: "Forget boring lectures. In this detective simulation, your team faces unstructured data from real case files. The goal is to filter out the noise, verify sources, and build a causal chain based on facts to identify the suspect.",
@@ -125,8 +123,6 @@ const translations = {
         nav_reviews: "Opinie",
         nav_contact: "Kontakt",
 
-        loss_aversion_text: "Większość firmowych eventów integracyjnych wygląda tak samo: wszyscy przychodzą, nikt się nie ekscytuje, a w poniedziałek nikt już nie pamięta. Quizy nagradzają tych, którzy dużo zapamiętują. Escape roomy mieszczą max 8 osób. Szkolenia — nie zaczynajmy. Szukasz czegoś, co naprawdę zmienia sposób pracy Twojego zespołu.",
-
         immersion_title: "Gra jako narzędzie rozwoju",
         imm_1_title: "Myślenie Krytyczne",
         imm_1_text: "Zapomnij o nudnych wykładach. W tej **symulacji detektywistycznej** Twój zespół mierzy się z danymi z akt sprawy. Celem jest odsianie szumu, weryfikacja źródeł i zbudowanie ciągu przyczynowo-skutkowego, by wskazać sprawcę.",
@@ -231,8 +227,6 @@ const translations = {
         nav_pricing: "Пакети та Ціни",
         nav_reviews: "Відгуки та Клієнти",
         nav_contact: "Контакти",
-
-        loss_aversion_text: "Більшість корпоративних тімбілдингів виглядають однаково: всі прийшли, ніхто не захоплений, а в понеділок вже ніхто не пам'ятає. Квізи нагороджують того, хто більше запам'ятав. Квести вміщають максимум 8 людей. Тренінги — навіть не починаймо. Ви шукаєте не розваги. Ви шукаєте те, що реально змінює те, як ваша команда працює разом.",
 
         immersion_title: "Гра як інструмент розвитку",
         imm_1_title: "Критичне мислення",
