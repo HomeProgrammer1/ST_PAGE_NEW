@@ -1629,6 +1629,7 @@ select:focus {
 /* ---- STAT BAR ---- */
 .stat-bar-section {
     padding: 40px 0;
+    background: transparent;
     border-top: 1px solid rgba(255,255,255,0.06);
     border-bottom: 1px solid rgba(255,255,255,0.06);
 }
@@ -1679,7 +1680,7 @@ select:focus {
 /* ---- URGENCY BAR ---- */
 .urgency-bar {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 3.5rem;
     padding: 0.75rem 1.5rem;
     background: rgba(192, 57, 43, 0.1);
     border: 1px solid rgba(192, 57, 43, 0.3);

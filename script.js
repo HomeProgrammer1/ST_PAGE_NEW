@@ -337,7 +337,7 @@ function changeLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-            if (key.includes('list') || key.includes('text') || key.includes('copyright') || key.includes('desc')) {
+            if (key.includes('list') || key.includes('text') || key.includes('copyright') || key.includes('desc') || key.includes('callout')) {
                 el.innerHTML = translations[lang][key];
             } else {
                 el.innerText = translations[lang][key];
